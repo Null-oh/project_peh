@@ -16,7 +16,7 @@ var bounds = {
 	"wpmin" : 0.0,
 	"wpmax" : 0.0,
 	"omegamax" : 10.0,
-	"omegamin" : 6.0,
+	"omegamin" : 0.5,
 	"numax" : 100.0,
 	"numin" : 0.0,
 }
@@ -100,8 +100,10 @@ func set_fuel():
 	
 	print("==========")
 
+signal overflow
+
 func read(parent): #считать значение со слайдера или строки
-	var variable = parent.name #имя переменной
+	#var variable = parent.name #имя переменной
 	
 	for i in parent.get_children():
 		
@@ -115,6 +117,19 @@ func read(parent): #считать значение со слайдера или
 		elif i.name == "TextEdit": #q
 			if i.text.is_valid_float():
 				variables[parent.name] = float(i.text)
+		
+		if check_overflow():
+			overflow.emit()
+
+func check_overflow() -> bool:
+	var sum : float = 0.0
+	for i in material_stats:
+		sum += material_stats[i]
+	sum -= material_stats["wp"]
+	
+	if sum >= 100.0:
+		return true
+	return false
 
 func write(label: Label):
 	var parent = label.get_parent()

@@ -11,6 +11,8 @@ var boxes
 @export var coal_icon = preload("res://img/Coal_JE4_BE3.png")
 @export var wood_icon = preload("res://img/Birch_Planks.png")
 
+@onready var overflow: Label = $NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/header/overflow
+
 func _ready():
 	sliders = find_children("*", "HSlider", true, false)
 	for i in sliders:
@@ -22,6 +24,18 @@ func _ready():
 	boxes = find_children("box", "CheckBox", true, false)
 	
 	q_text.text = str(snapped(Global.variables["q"], 0.1))
+	
+	overflow.self_modulate = Color(1.0, 1.0, 1.0, 0.0)
+	Global.overflow.connect(on_overflow)
+
+func on_overflow():
+	overflow.self_modulate = Color(1.0, 1.0, 1.0, 0.0)
+	var tween = create_tween()
+	tween.tween_property(overflow, "self_modulate", Color(1.0, 1.0, 1.0, 1.0), 0.1)
+	tween.tween_property(overflow, "self_modulate", Color(1.0, 1.0, 1.0, 0.0), 0.1)
+	tween.tween_property(overflow, "self_modulate", Color(1.0, 1.0, 1.0, 1.0), 0.1)
+	tween.tween_property(overflow, "self_modulate", Color(1.0, 1.0, 1.0, 0.0), 0.1)
+	
 
 func update_values_on_screen(_new_value : float):
 	for k in sliders:
