@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://blf21sii556fc"]
+
+[ext_resource type="Script" uid="uid://dgy7pw2pina5v" path="res://scenes/start.gd" id="1_u80x2"]
+[ext_resource type="Texture2D" uid="uid://g2hj6majqoaa" path="res://img/template.png" id="2_bodal"]
+
+[node name="Start" type="CanvasLayer" unique_id=1809795503]
+script = ExtResource("1_u80x2")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=2018019675]
+texture_filter = 1
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_bodal")
+region_rect = Rect2(64, 192, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1343875461]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1548693573]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1659032888]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "Проект \"П\""
+horizontal_alignment = 1
+
+[node name="scheme" type="Button" parent="MarginContainer/VBoxContainer" unique_id=1573236059]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "АВТОМАТИКА"
+
+[node name="furnace" type="Button" parent="MarginContainer/VBoxContainer" unique_id=754668426]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "КОТЁЛ"
+
+[node name="exit" type="Button" parent="MarginContainer/VBoxContainer" unique_id=473512547]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "ЗАКРЫТЬ"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/scheme" to="." method="_on_scheme_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/furnace" to="." method="_on_furnace_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/exit" to="." method="_on_exit_pressed"]

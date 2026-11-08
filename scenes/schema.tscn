@@ -1,0 +1,964 @@
+[gd_scene format=3 uid="uid://ky0rxcc2akh"]
+
+[ext_resource type="Texture2D" uid="uid://d25rafn5plrrr" path="res://img/schematics/all.png" id="1_714vr"]
+[ext_resource type="Texture2D" uid="uid://g2hj6majqoaa" path="res://img/template.png" id="2_3cdpk"]
+[ext_resource type="Texture2D" uid="uid://dmqah0e0susg2" path="res://img/schematics/air.png" id="3_1ia2i"]
+[ext_resource type="Texture2D" uid="uid://cl6tg5ebtindj" path="res://img/schematics/water.png" id="4_hb1m3"]
+[ext_resource type="Texture2D" uid="uid://dl555u80y8p8q" path="res://img/schematics/fuel.png" id="5_5niyd"]
+[ext_resource type="Texture2D" uid="uid://btldvqu40ytdh" path="res://img/schematics/shelf.png" id="6_uuapn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp1wb"]
+atlas = ExtResource("2_3cdpk")
+region = Rect2(76, 12, 40, 40)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vqba7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rqw3v"]
+texture = ExtResource("2_3cdpk")
+texture_margin_left = 12.0
+texture_margin_top = 12.0
+texture_margin_right = 12.0
+texture_margin_bottom = 12.0
+region_rect = Rect2(128, 192, 64, 64)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g6d2q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 5
+border_width_right = 5
+border_color = Color(0.63529414, 0.6431373, 1, 0)
+border_blend = true
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhk6q"]
+bg_color = Color(0.63529414, 0.6431373, 1, 1)
+border_width_left = 5
+border_width_right = 5
+border_color = Color(0.63529414, 0.6431373, 1, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqba7"]
+atlas = ExtResource("2_3cdpk")
+region = Rect2(140, 204, 40, 40)
+
+[node name="Schema" type="CanvasLayer" unique_id=1879302011]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=166809871]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1484950562]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = SubResource("AtlasTexture_hp1wb")
+
+[node name="schemas" type="TabContainer" parent="HBoxContainer/TextureRect" unique_id=941337652]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme_override_colors/font_selected_color = Color(0.8885607, 0.89722884, 0.99999815, 1)
+theme_override_colors/font_unselected_color = Color(0.49003136, 0.4579987, 0.9999878, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/panel = SubResource("StyleBoxFlat_vqba7")
+theme_override_styles/tabbar_background = SubResource("StyleBoxTexture_rqw3v")
+theme_override_styles/tab_unselected = SubResource("StyleBoxFlat_g6d2q")
+theme_override_styles/tab_hovered = SubResource("StyleBoxFlat_g6d2q")
+theme_override_styles/tab_selected = SubResource("StyleBoxFlat_jhk6q")
+current_tab = 4
+tab_0/title = "Общая схема"
+tab_1/title = "Воздух и дымовой тракт"
+tab_2/title = "Водяной контур"
+tab_3/title = "Подача топлива и колосники"
+tab_4/title = "Шкаф автоматики и группы сигналов"
+
+[node name="general" type="TabBar" parent="HBoxContainer/TextureRect/schemas" unique_id=644315378]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+metadata/_tab_name = "Общая схема"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextureRect/schemas/general" unique_id=1837423177]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TextureRect/schemas/general/MarginContainer" unique_id=595633769]
+layout_mode = 2
+
+[node name="schema" type="TextureRect" parent="HBoxContainer/TextureRect/schemas/general/MarginContainer/VBoxContainer" unique_id=1918777093]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("1_714vr")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="bunker" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/general/MarginContainer/VBoxContainer/schema" unique_id=660778303]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 28.0
+offset_top = 68.0
+offset_right = 112.0
+offset_bottom = 116.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="fuel_schneck" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/general/MarginContainer/VBoxContainer/schema" unique_id=2031769968]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 152.0
+offset_top = 74.0
+offset_right = 229.0
+offset_bottom = 109.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="furnace" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/general/MarginContainer/VBoxContainer/schema" unique_id=1915804173]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 273.0
+offset_top = 55.0
+offset_right = 402.0
+offset_bottom = 129.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="water" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/general/MarginContainer/VBoxContainer/schema" unique_id=1155014968]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 295.0
+offset_top = 154.0
+offset_right = 379.0
+offset_bottom = 194.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="reverse_valve" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/general/MarginContainer/VBoxContainer/schema" unique_id=1759207853]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 632.0
+offset_top = 77.0
+offset_right = 679.0
+offset_bottom = 106.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="chimney" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/general/MarginContainer/VBoxContainer/schema" unique_id=105295677]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 699.0
+offset_top = 65.0
+offset_right = 766.0
+offset_bottom = 119.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="controller" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/general/MarginContainer/VBoxContainer/schema" unique_id=551763913]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 652.0
+offset_top = 217.0
+offset_right = 792.0
+offset_bottom = 358.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="circulation" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/general/MarginContainer/VBoxContainer/schema" unique_id=1974797376]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 443.0
+offset_top = 158.0
+offset_right = 473.0
+offset_bottom = 188.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="smoke" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/general/MarginContainer/VBoxContainer/schema" unique_id=1383984939]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 579.0
+offset_top = 76.0
+offset_right = 610.0
+offset_bottom = 108.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="info_box" type="NinePatchRect" parent="HBoxContainer/TextureRect/schemas/general/MarginContainer/VBoxContainer" unique_id=1267218921]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+texture = ExtResource("2_3cdpk")
+region_rect = Rect2(0, 64, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextureRect/schemas/general/MarginContainer/VBoxContainer/info_box" unique_id=791595875]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="info" type="Label" parent="HBoxContainer/TextureRect/schemas/general/MarginContainer/VBoxContainer/info_box/MarginContainer" unique_id=1748667712]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+vertical_alignment = 1
+
+[node name="air" type="TabBar" parent="HBoxContainer/TextureRect/schemas" unique_id=554879821]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+metadata/_tab_name = "Воздух и дымовой тракт"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextureRect/schemas/air" unique_id=920198583]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer" unique_id=98070044]
+layout_mode = 2
+
+[node name="schema" type="TextureRect" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer" unique_id=1466176850]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_1ia2i")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="fan" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer/schema" unique_id=583831567]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 116.0
+offset_top = 84.0
+offset_right = 171.0
+offset_bottom = 118.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="air_flap" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer/schema" unique_id=1918321098]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 186.0
+offset_top = 89.0
+offset_right = 214.0
+offset_bottom = 115.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="firebox" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer/schema" unique_id=1152616581]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 252.0
+offset_top = 79.0
+offset_right = 360.0
+offset_bottom = 124.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="fan_control" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer/schema" unique_id=2077566369]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 64.0
+offset_top = 203.0
+offset_right = 146.0
+offset_bottom = 257.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="air_flap_control" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer/schema" unique_id=1094021067]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 159.0
+offset_top = 202.0
+offset_right = 239.0
+offset_bottom = 255.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="controller" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer/schema" unique_id=1110105071]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 623.0
+offset_top = 195.0
+offset_right = 773.0
+offset_bottom = 299.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="exhauster_control" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer/schema" unique_id=52092140]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 519.0
+offset_top = 136.0
+offset_right = 600.0
+offset_bottom = 188.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="smoke" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer/schema" unique_id=1128208449]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 543.0
+offset_top = 86.0
+offset_right = 575.0
+offset_bottom = 118.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="chimney" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer/schema" unique_id=1339214792]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 669.0
+offset_top = 75.0
+offset_right = 758.0
+offset_bottom = 129.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="reverse_valve" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer/schema" unique_id=374765830]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 610.0
+offset_top = 89.0
+offset_right = 635.0
+offset_bottom = 115.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="coil" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer/schema" unique_id=1554486240]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 253.0
+offset_top = 79.0
+offset_right = 361.0
+offset_bottom = 124.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="info_box" type="NinePatchRect" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer" unique_id=582719280]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+texture = ExtResource("2_3cdpk")
+region_rect = Rect2(0, 64, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer/info_box" unique_id=69415411]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="info" type="Label" parent="HBoxContainer/TextureRect/schemas/air/MarginContainer/VBoxContainer/info_box/MarginContainer" unique_id=1537905940]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+vertical_alignment = 1
+
+[node name="water" type="TabBar" parent="HBoxContainer/TextureRect/schemas" unique_id=1567406056]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 2
+metadata/_tab_name = "Водяной контур"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextureRect/schemas/water" unique_id=1816865615]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TextureRect/schemas/water/MarginContainer" unique_id=1000405618]
+layout_mode = 2
+
+[node name="schema" type="TextureRect" parent="HBoxContainer/TextureRect/schemas/water/MarginContainer/VBoxContainer" unique_id=2040047511]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("4_hb1m3")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="feedback" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/water/MarginContainer/VBoxContainer/schema" unique_id=1782239204]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 33.0
+offset_top = 146.0
+offset_right = 117.0
+offset_bottom = 186.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="pump" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/water/MarginContainer/VBoxContainer/schema" unique_id=1093120083]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 150.0
+offset_top = 152.0
+offset_right = 177.0
+offset_bottom = 180.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="coil" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/water/MarginContainer/VBoxContainer/schema" unique_id=374549927]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 221.0
+offset_top = 4.0
+offset_right = 314.0
+offset_bottom = 44.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="boiler" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/water/MarginContainer/VBoxContainer/schema" unique_id=372396934]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 264.0
+offset_top = 139.0
+offset_right = 373.0
+offset_bottom = 193.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="user" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/water/MarginContainer/VBoxContainer/schema" unique_id=790283890]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 394.0
+offset_top = 147.0
+offset_right = 487.0
+offset_bottom = 187.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="protection" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/water/MarginContainer/VBoxContainer/schema" unique_id=786391365]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 466.0
+offset_top = 204.0
+offset_right = 639.0
+offset_bottom = 244.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="controller" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/water/MarginContainer/VBoxContainer/schema" unique_id=263004389]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 487.0
+offset_top = 253.0
+offset_right = 619.0
+offset_bottom = 365.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="info_box" type="NinePatchRect" parent="HBoxContainer/TextureRect/schemas/water/MarginContainer/VBoxContainer" unique_id=1785901715]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+texture = ExtResource("2_3cdpk")
+region_rect = Rect2(0, 64, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextureRect/schemas/water/MarginContainer/VBoxContainer/info_box" unique_id=1728151381]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="info" type="Label" parent="HBoxContainer/TextureRect/schemas/water/MarginContainer/VBoxContainer/info_box/MarginContainer" unique_id=1549185411]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+vertical_alignment = 1
+
+[node name="fuel" type="TabBar" parent="HBoxContainer/TextureRect/schemas" unique_id=1394811340]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 3
+metadata/_tab_name = "Подача топлива и колосники"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextureRect/schemas/fuel" unique_id=636099901]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TextureRect/schemas/fuel/MarginContainer" unique_id=2090952490]
+layout_mode = 2
+
+[node name="schema" type="TextureRect" parent="HBoxContainer/TextureRect/schemas/fuel/MarginContainer/VBoxContainer" unique_id=845130]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("5_5niyd")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="bunker" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/fuel/MarginContainer/VBoxContainer/schema" unique_id=1788356895]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 25.0
+offset_top = 48.0
+offset_right = 124.0
+offset_bottom = 101.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="fuel_schneck" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/fuel/MarginContainer/VBoxContainer/schema" unique_id=926359223]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 169.0
+offset_top = 53.0
+offset_right = 271.0
+offset_bottom = 98.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="furnace" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/fuel/MarginContainer/VBoxContainer/schema" unique_id=1973282257]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 312.0
+offset_top = 48.0
+offset_right = 454.0
+offset_bottom = 103.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ash" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/fuel/MarginContainer/VBoxContainer/schema" unique_id=641572153]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 493.0
+offset_top = 48.0
+offset_right = 590.0
+offset_bottom = 102.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="cycle" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/fuel/MarginContainer/VBoxContainer/schema" unique_id=1944899540]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 445.0
+offset_top = 132.0
+offset_right = 562.0
+offset_bottom = 194.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="motor" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/fuel/MarginContainer/VBoxContainer/schema" unique_id=1584114729]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 592.0
+offset_top = 144.0
+offset_right = 628.0
+offset_bottom = 181.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="controller" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/fuel/MarginContainer/VBoxContainer/schema" unique_id=1226655896]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 412.0
+offset_top = 232.0
+offset_right = 569.0
+offset_bottom = 344.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="freq" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/fuel/MarginContainer/VBoxContainer/schema" unique_id=251117333]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 283.0
+offset_top = 172.0
+offset_right = 401.0
+offset_bottom = 232.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="info_box" type="NinePatchRect" parent="HBoxContainer/TextureRect/schemas/fuel/MarginContainer/VBoxContainer" unique_id=1534024662]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+texture = ExtResource("2_3cdpk")
+region_rect = Rect2(0, 64, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextureRect/schemas/fuel/MarginContainer/VBoxContainer/info_box" unique_id=288912069]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="info" type="Label" parent="HBoxContainer/TextureRect/schemas/fuel/MarginContainer/VBoxContainer/info_box/MarginContainer" unique_id=2000899293]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+vertical_alignment = 1
+
+[node name="closet" type="TabBar" parent="HBoxContainer/TextureRect/schemas" unique_id=1953714022]
+layout_mode = 2
+metadata/_tab_index = 4
+metadata/_tab_name = "Шкаф автоматики и группы сигналов"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextureRect/schemas/closet" unique_id=1691595193]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer" unique_id=652555358]
+layout_mode = 2
+
+[node name="schema" type="TextureRect" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer" unique_id=1813491671]
+texture_filter = 2
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("6_uuapn")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="tesh" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=1268298951]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 56.0
+offset_right = 143.0
+offset_bottom = 109.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ptpdt" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=212399958]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 11.0
+offset_top = 133.0
+offset_right = 144.0
+offset_bottom = 188.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="zsls" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=248344245]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 12.0
+offset_top = 209.0
+offset_right = 143.0
+offset_bottom = 263.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="aidi" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=878407785]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 201.0
+offset_top = 119.0
+offset_right = 296.0
+offset_bottom = 196.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="anxiety" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=1356103301]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 191.0
+offset_top = 11.0
+offset_right = 306.0
+offset_bottom = 61.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="data" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=1460881499]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 345.0
+offset_top = 37.0
+offset_right = 440.0
+offset_bottom = 74.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="block" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=1284483279]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 334.0
+offset_top = 106.0
+offset_right = 451.0
+offset_bottom = 206.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="aodo" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=2105322527]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 489.0
+offset_top = 118.0
+offset_right = 583.0
+offset_bottom = 194.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="schneck_motor" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=1468562774]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 626.0
+offset_top = 37.0
+offset_right = 731.0
+offset_bottom = 86.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="more_water" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=1515740272]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 671.0
+offset_top = 198.0
+offset_right = 795.0
+offset_bottom = 228.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="extra" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=2055676607]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 670.0
+offset_top = 234.0
+offset_right = 795.0
+offset_bottom = 264.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="supply" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=1384812231]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 549.0
+offset_top = 234.0
+offset_right = 645.0
+offset_bottom = 264.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="indep" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=263712287]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 549.0
+offset_top = 199.0
+offset_right = 645.0
+offset_bottom = 230.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="safety" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=157015402]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 268.0
+offset_top = 228.0
+offset_right = 517.0
+offset_bottom = 270.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="relay" type="TextureButton" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/schema" unique_id=576930196]
+self_modulate = Color(1, 1, 1, 0.19607843)
+layout_mode = 0
+offset_left = 482.0
+offset_top = 24.0
+offset_right = 589.0
+offset_bottom = 74.0
+texture_hover = SubResource("AtlasTexture_vqba7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="info_box" type="NinePatchRect" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer" unique_id=2033043846]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.3
+texture = ExtResource("2_3cdpk")
+region_rect = Rect2(0, 64, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/info_box" unique_id=1026313440]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="info" type="Label" parent="HBoxContainer/TextureRect/schemas/closet/MarginContainer/VBoxContainer/info_box/MarginContainer" unique_id=290248651]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+vertical_alignment = 1
+
+[node name="calculation" type="NinePatchRect" parent="HBoxContainer" unique_id=511621585]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.33
+texture = ExtResource("2_3cdpk")
+region_rect = Rect2(128, 64, 64, 64)
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/calculation" unique_id=352434034]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/calculation/MarginContainer" unique_id=1198685546]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/calculation/MarginContainer/VBoxContainer" unique_id=1035126587]
+custom_maximum_size = Vector2(400, -1)
+layout_mode = 2
+text = "Расчёты:"

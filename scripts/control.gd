@@ -35,7 +35,6 @@ func on_overflow():
 	tween.tween_property(overflow, "self_modulate", Color(1.0, 1.0, 1.0, 0.0), 0.1)
 	tween.tween_property(overflow, "self_modulate", Color(1.0, 1.0, 1.0, 1.0), 0.1)
 	tween.tween_property(overflow, "self_modulate", Color(1.0, 1.0, 1.0, 0.0), 0.1)
-	
 
 func update_values_on_screen(_new_value : float):
 	for k in sliders:

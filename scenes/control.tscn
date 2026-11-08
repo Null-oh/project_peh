@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://drniu376716gy" path="res://img/Dmitri_Mendeleev.jpg" id="8_pxugv"]
 [ext_resource type="Texture2D" uid="uid://bm5cn13vg5q0x" path="res://img/F.PNG" id="9_am1vj"]
 [ext_resource type="AudioStream" uid="uid://bgi3paf7omkvt" path="res://img/anime-wow-sound-effect.mp3" id="9_eh0v1"]
-[ext_resource type="Texture2D" uid="uid://ccepho1vbjqlo" path="res://img/v.PNG" id="11_eh0v1"]
+[ext_resource type="Texture2D" uid="uid://ccdui1rlo6hun" path="res://img/ft.PNG" id="11_eh0v1"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_g31lc"]
 
@@ -126,7 +126,7 @@ alignment = 1
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/cp" unique_id=1488060796]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "Cp = "
 
 [node name="HSlider" type="HSlider" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/cp" unique_id=110586758]
@@ -138,7 +138,7 @@ step = 0.01
 
 [node name="value" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/cp" unique_id=264161302]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "15%"
 
 [node name="hp" type="HBoxContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox" unique_id=1198912482]
@@ -149,7 +149,7 @@ alignment = 1
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/hp" unique_id=2086734150]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "Hp = "
 
 [node name="HSlider" type="HSlider" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/hp" unique_id=1822354596]
@@ -161,7 +161,7 @@ step = 0.01
 
 [node name="value" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/hp" unique_id=1877979492]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "15%"
 
 [node name="op" type="HBoxContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox" unique_id=1395347921]
@@ -172,7 +172,7 @@ alignment = 1
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/op" unique_id=1064477264]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "Op = "
 
 [node name="HSlider" type="HSlider" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/op" unique_id=2083439112]
@@ -184,7 +184,7 @@ step = 0.01
 
 [node name="value" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/op" unique_id=559865390]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "15%"
 
 [node name="sp" type="HBoxContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox" unique_id=934696480]
@@ -195,7 +195,7 @@ alignment = 1
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/sp" unique_id=767312587]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "Sp = "
 
 [node name="HSlider" type="HSlider" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/sp" unique_id=179775170]
@@ -207,7 +207,7 @@ step = 0.01
 
 [node name="value" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/sp" unique_id=498774941]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "15%"
 
 [node name="np" type="HBoxContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox" unique_id=531531376]
@@ -218,7 +218,7 @@ alignment = 1
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/np" unique_id=950450363]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "Np = "
 
 [node name="HSlider" type="HSlider" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/np" unique_id=394086004]
@@ -230,7 +230,7 @@ step = 0.01
 
 [node name="value" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/np" unique_id=1807539830]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "15%"
 
 [node name="wp" type="HBoxContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox" unique_id=1386638594]
@@ -241,7 +241,7 @@ alignment = 1
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/wp" unique_id=1464191308]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "Wp = "
 
 [node name="HSlider" type="HSlider" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/wp" unique_id=1918182465]
@@ -253,7 +253,7 @@ step = 0.01
 
 [node name="value" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/mats/MarginContainer/vbox/wp" unique_id=43999907]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "15%"
 
 [node name="vars" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1220417266]
@@ -293,7 +293,7 @@ alignment = 1
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox/q" unique_id=603324959]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "Q = "
 
 [node name="TextEdit" type="TextEdit" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox/q" unique_id=1277839776]
@@ -302,7 +302,7 @@ size_flags_horizontal = 3
 
 [node name="value" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox/q" unique_id=1196866161]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "Дж"
 
 [node name="omega" type="HBoxContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox" unique_id=785010965]
@@ -313,7 +313,7 @@ alignment = 1
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox/omega" unique_id=919654941]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "w = "
 
 [node name="HSlider" type="HSlider" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox/omega" unique_id=1109985485]
@@ -321,11 +321,14 @@ custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-step = 0.01
+min_value = 0.5
+max_value = 10.0
+step = 0.5
+value = 0.5
 
 [node name="value" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox/omega" unique_id=2088970869]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "15 м/с"
 
 [node name="nu" type="HBoxContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox" unique_id=2010984772]
@@ -336,7 +339,7 @@ alignment = 1
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox/nu" unique_id=253957178]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "nu = "
 
 [node name="HSlider" type="HSlider" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox/nu" unique_id=492658105]
@@ -344,24 +347,58 @@ custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-min_value = 0.1
-value = 0.1
+min_value = 10.0
+step = 5.0
+value = 10.0
 
 [node name="value" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox/nu" unique_id=715207898]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 20
 text = "15%"
+
+[node name="t" type="HBoxContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox" unique_id=116596794]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox/t" unique_id=161746767]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "T = "
+
+[node name="HSlider" type="HSlider" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox/t" unique_id=1599838978]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -50.0
+max_value = 500.0
+step = 10.0
+
+[node name="value" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox/t" unique_id=977072410]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "0°C"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="NinePatchRect/MarginContainer/HBoxContainer" unique_id=9934088]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 5
 
 [node name="formula" type="TextureRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1655438740]
 custom_minimum_size = Vector2(500, 200)
 custom_maximum_size = Vector2(500, 200)
 layout_mode = 2
 size_flags_horizontal = 4
-stretch_mode = 3
+expand_mode = 5
+stretch_mode = 5
+
+[node name="source" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=343362224]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
 
 [node name="calculations" type="NinePatchRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2" unique_id=35979420]
 layout_mode = 2
@@ -400,6 +437,8 @@ custom_minimum_size = Vector2(23.85, 10)
 layout_mode = 2
 button_group = SubResource("ButtonGroup_g31lc")
 script = ExtResource("4_ee4bf")
+screenshot_image = ExtResource("5_sky72")
+source_text = "(Тепловой расчёт котельных агрегатов (нормативный метод), ред. Н. В. Кузнецова, Москва 1973)"
 
 [node name="image" type="TextureRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/v0v/box" unique_id=1037893963]
 visible = false
@@ -451,6 +490,8 @@ custom_minimum_size = Vector2(23.85, 0)
 layout_mode = 2
 button_group = SubResource("ButtonGroup_g31lc")
 script = ExtResource("4_ee4bf")
+screenshot_image = ExtResource("6_0ytqx")
+source_text = "(Тепловой расчёт котельных агрегатов (нормативный метод), ред. Н. В. Кузнецова, Москва 1973)"
 
 [node name="image" type="TextureRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/v0g/box" unique_id=812919425]
 visible = false
@@ -506,6 +547,8 @@ custom_minimum_size = Vector2(23.85, 0)
 layout_mode = 2
 button_group = SubResource("ButtonGroup_g31lc")
 script = ExtResource("4_ee4bf")
+screenshot_image = ExtResource("7_pxugv")
+source_text = "..."
 
 [node name="image" type="TextureButton" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/qpn/box" unique_id=2013960557]
 visible = false
@@ -517,6 +560,7 @@ offset_bottom = -164.0
 texture_normal = ExtResource("7_pxugv")
 
 [node name="mendeleev" type="TextureRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/qpn/box/image" unique_id=1783860958]
+visible = false
 layout_mode = 0
 offset_left = 457.99997
 offset_top = 9.0
@@ -560,6 +604,8 @@ custom_minimum_size = Vector2(23.85, 0)
 layout_mode = 2
 button_group = SubResource("ButtonGroup_g31lc")
 script = ExtResource("4_ee4bf")
+screenshot_image = ExtResource("8_eh0v1")
+source_text = "(Тепловой расчёт котельных агрегатов (нормативный метод), ред. Н. В. Кузнецова, Москва 1973)"
 
 [node name="image" type="TextureRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/b/box" unique_id=1968927830]
 visible = false
@@ -611,25 +657,29 @@ custom_minimum_size = Vector2(23.85, 0)
 layout_mode = 2
 button_group = SubResource("ButtonGroup_g31lc")
 script = ExtResource("4_ee4bf")
+screenshot_image = ExtResource("11_eh0v1")
+source_text = "(Основы проектирования котельных установок (учебное пособие для вузов), Гусев Ю. Л.,Стройиздат, Москва, 1972)"
 
 [node name="image" type="TextureRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/v/box" unique_id=1069022938]
 visible = false
 layout_mode = 0
-offset_left = -74.0
-offset_top = -450.0
-offset_right = 379.0
-offset_bottom = -280.0
+offset_left = -11.0
+offset_top = -455.0
+offset_right = 479.78262
+offset_bottom = -289.0
 texture = ExtResource("11_eh0v1")
+expand_mode = 1
 
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/v/box/image" unique_id=2020540912]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 175.0
-offset_right = 609.0
-offset_bottom = 250.0
+offset_left = 1.0
+offset_top = 168.0
+offset_right = 592.0
+offset_bottom = 243.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 12
-text = "(Тепловой расчёт котельных агрегатов (нормативный метод), ред. Н. В. Кузнецова, Москва 1973)"
+text = "(Основы проектирования котельных установок (учебное пособие для вузов), Гусев Ю. Л.,
+Стройиздат, Москва, 1972)"
 
 [node name="Label" type="Label" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/v" unique_id=1896303640]
 custom_minimum_size = Vector2(85, 0)
@@ -662,8 +712,11 @@ custom_minimum_size = Vector2(23.85, 0)
 layout_mode = 2
 button_group = SubResource("ButtonGroup_g31lc")
 script = ExtResource("4_ee4bf")
+screenshot_image = ExtResource("9_am1vj")
+source_text = "(Аэродинамический расчёт котельных установок (нормативный метод), ред. С. И. Мочан, Ленинград 1977)"
 
 [node name="image" type="TextureRect" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/f/box" unique_id=1747398266]
+visible = false
 layout_mode = 0
 offset_left = -46.0
 offset_top = -510.0
@@ -705,4 +758,11 @@ horizontal_alignment = 1
 
 [connection signal="item_selected" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/header/fuel" to="." method="_on_fuel_item_selected"]
 [connection signal="text_changed" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer/vars/MarginContainer/vbox/q/TextEdit" to="." method="_on_text_edit_text_changed"]
+[connection signal="button_down" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/v0v/box" to="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/v0v/box" method="_on_button_down"]
+[connection signal="button_up" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/v0v/box" to="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/v0v/box" method="_on_button_up"]
+[connection signal="button_down" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/v0g/box" to="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/v0g/box" method="_on_button_down"]
+[connection signal="button_down" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/qpn/box" to="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/qpn/box" method="_on_button_down"]
 [connection signal="pressed" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/qpn/box/image" to="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/qpn/box" method="_on_image_pressed"]
+[connection signal="button_down" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/b/box" to="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/b/box" method="_on_button_down"]
+[connection signal="button_down" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/v/box" to="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/v/box" method="_on_button_down"]
+[connection signal="button_down" from="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/f/box" to="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox/f/box" method="_on_button_down"]

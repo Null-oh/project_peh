@@ -19,6 +19,8 @@ var bounds = {
 	"omegamin" : 0.5,
 	"numax" : 100.0,
 	"numin" : 0.0,
+	"tmin" : -50.0,
+	"tmax" : 500.0
 }
 
 var material_stats = {
@@ -31,9 +33,10 @@ var material_stats = {
 }
 
 var variables = {
-	"q": 20.0,
-	"omega": 0.1,
-	"nu": 0.1
+	"q" : 20.0,
+	"omega" : 0.1,
+	"nu" : 0.1,
+	"t" : 150
 }
 
 var results = {
@@ -142,6 +145,7 @@ func write(label: Label):
 			"q": label.text = str(snapped(variables[parent.name], 0.1)) + " кВт"
 			"omega": label.text = str(snapped(variables[parent.name], 0.1)) + " м/с"
 			"nu": label.text = str(snapped(variables[parent.name], 0.1)) + "%"
+			"t": label.text = str(snapped(variables[parent.name], 0.1)) + "°C"
 		
 	
 	if results.has(parent.name):
@@ -166,12 +170,12 @@ func count():
 	
 	results["b"] = variables["q"] / (results["qpn"] * (variables["nu"] / 100.0))
 	
-	results["v"] = results["b"] * results["v0g"]
+	results["v"] = ( results["b"] * results["v0g"] ) * (1 + (variables["t"]/273.0))
 	
 	results["f"] = results["v"] / variables["omega"]
 	
-	print("Global: counted")
-	print(results)
-	print("==========")
+	#print("Global: counted")
+	#print(results)
+	#print("==========")
 	
 	
