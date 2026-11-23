@@ -699,7 +699,7 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
-text = "м3/с"
+text = "м3/ч"
 horizontal_alignment = 1
 
 [node name="f" type="HBoxContainer" parent="NinePatchRect/MarginContainer/HBoxContainer/VBoxContainer2/calculations/MarginContainer/vbox" unique_id=2077796287]

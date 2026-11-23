@@ -35,8 +35,8 @@ var material_stats = {
 var variables = {
 	"q" : 20.0,
 	"omega" : 0.1,
-	"nu" : 0.1,
-	"t" : 150
+	"nu" : 0.9,
+	"t" : 300.0
 }
 
 var results = {
@@ -49,7 +49,6 @@ var results = {
 }
 
 func apply_bounds(slider : HSlider): #по сигналу изменения переменной топлива
-	print("Global.apply_bounds() called on: ", slider.get_parent().name)
 	
 	var parent = slider.get_parent()
 	
@@ -58,11 +57,8 @@ func apply_bounds(slider : HSlider): #по сигналу изменения п�
 	if bounds.has(parent.name + "min"):
 		slider.min_value = bounds[parent.name + "min"]
 	
-	print("Set bounds: max = ", slider.max_value, ", min = ", slider.min_value)
-	print("==========")
 
 func set_fuel(): 
-	print("Global.set_fuel() called")
 	match fuel:
 		"coal": 
 			bounds["cpmin"] = 75.0
@@ -101,7 +97,6 @@ func set_fuel():
 			bounds["wpmin"] = 0.0
 			bounds["wpmax"] = 80.0
 	
-	print("==========")
 
 signal overflow
 
@@ -153,12 +148,15 @@ func write(label: Label):
 			"v0v" : label.text = str(snapped(results[parent.name], 0.001))
 			"v0g" : label.text = str(snapped(results[parent.name], 0.001))
 			"qpn" : label.text = str(snapped(results[parent.name], 0.001))
-			"b" : label.text = str(snapped(results[parent.name] * 3600, 0.001))
+			#"b" : label.text = str(snapped(results[parent.name] * 3600, 0.001))
+			"b" : label.text = str(snapped(results[parent.name], 0.001))
 			"v" : label.text = str(snapped(results[parent.name], 0.001))
-			"f" : label.text = str(snapped(results[parent.name] * 10000, 0.001))
+			#"f" : label.text = str(snapped(results[parent.name] * 10000, 0.001))
+			"f" : label.text = str(snapped(results[parent.name], 0.001))
 
 func count():
-	results["v0v"] = 0.0889 * (material_stats["cp"] + 0.375 * material_stats["sp"]) + 0.265 * material_stats["hp"] - 0.0333 * material_stats["op"]
+	results["v0v"] = 0.0889 * (material_stats["cp"] + 0.375 * material_stats["sp"]) + \
+	0.265 * material_stats["hp"] - 0.0333 * material_stats["op"]
 	
 	results["v0g"] = 0.0187 * (material_stats["cp"] + 0.375 * material_stats["sp"]) + \
 	0.79 * results["v0v"] + 0.008 * material_stats["np"] + \
@@ -168,14 +166,13 @@ func count():
 	108.9 * (material_stats["op"] + material_stats["np"] - material_stats["sp"]) - \
 	25.1 * (9.0 * material_stats["hp"] + material_stats["wp"])
 	
-	results["b"] = variables["q"] / (results["qpn"] * (variables["nu"] / 100.0))
+	results["b"] = (variables["q"] / (results["qpn"] * (variables["nu"] / 100.0))) * 3600
+	
+	#results["v"] = ( results["b"] * results["v0g"] ) * (1 + (variables["t"]/273.0))	
 	
 	results["v"] = ( results["b"] * results["v0g"] ) * (1 + (variables["t"]/273.0))
 	
 	results["f"] = results["v"] / variables["omega"]
 	
-	#print("Global: counted")
-	#print(results)
-	#print("==========")
 	
 	
